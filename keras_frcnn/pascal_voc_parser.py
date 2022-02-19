@@ -11,15 +11,15 @@ def get_data(input_path):
 
 	visualise = False
 
-	data_paths = [os.path.join(input_path,s) for s in ['VOC2007', 'VOC2012']]
+	data_paths = [input_path]
 	
 
 	print('Parsing annotation files')
 
 	for data_path in data_paths:
 
-		annot_path = os.path.join(data_path, 'Annotations')
-		imgs_path = os.path.join(data_path, 'JPEGImages')
+		annot_path = os.path.join(data_path, 'annotations')
+		imgs_path = os.path.join(data_path, 'images')
 		imgsets_path_trainval = os.path.join(data_path, 'ImageSets','Main','trainval.txt')
 		imgsets_path_test = os.path.join(data_path, 'ImageSets','Main','test.txt')
 
